@@ -5,3 +5,13 @@
     width: 50rem;
     max-width: 95%;
 }
+
+.style-delete-btn {
+    margin: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #7e0021;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    color: white;
+    font-size: x-large;
+}

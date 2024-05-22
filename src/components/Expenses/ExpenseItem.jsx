@@ -7,25 +7,25 @@ import propTypes from 'prop-types'
 const ExpenseItem = (props) => {
   const [title, setTitle] = useState(props.title);
 
-  const clickHandler = () => {
-    setTitle('Updated!');
-    console.log(title);
+
+  const deleteHandler = () => {
+    props.onDelete(props.title); // Call the onDelete function with the title
   };
 
   return (<Card className="expense-item">
     <ExpenseDate date={props.date}/>
     <div className="expense-item__description">
-      <h2>{title}</h2>
+      <h2>{props.title}</h2>
       <div className="expense-item__price">${props.amount}</div>
     </div>
-    <button onClick={clickHandler}>Change Title</button>
+    <button className="style-delete-btn" onClick={deleteHandler}>Delete</button>
   </Card>);
 }
 
-ExpenseItem.propTypes = {
+/*ExpenseItem.propTypes = {
   title: propTypes.string.isRequired,
   amount: propTypes.number.isRequired,
   date: propTypes.instanceOf(Date).isRequired
-}
+}*/
 
 export default ExpenseItem;
