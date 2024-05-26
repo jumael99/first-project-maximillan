@@ -1,0 +1,16 @@
+.app-container {
+
+    border: 2px solid #ff0000;
+    /*justify-content: center;*/
+}
+
+.below-app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.app-margin {
+    margin: 2rem 2rem;
+    /*background-color: #510674;*/
+}

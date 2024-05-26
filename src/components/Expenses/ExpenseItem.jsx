@@ -4,12 +4,13 @@ import ExpenseDate from './ExpenseDate.jsx'
 import React, {useState} from 'react'
 import propTypes from 'prop-types'
 
+
 const ExpenseItem = (props) => {
   const [title, setTitle] = useState(props.title);
 
 
   const deleteHandler = () => {
-    props.onDelete(props.title); // Call the onDelete function with the title
+    props.onDelete(props.title);
   };
 
   return (<Card className="expense-item">
